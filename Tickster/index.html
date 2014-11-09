@@ -1,0 +1,268 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tickster - Select Demo</title>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/app.css" />
+	<link rel="stylesheet" href="stylesheets/jquery.mCustomScrollbar.min.css" />
+	<link rel="icon" href="img/favicon-tickster.png" type="image/x-icon">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript">
+		// get div width
+		var width = $('div').width();
+
+		// calculate margin size
+		var marginLeft = width / 2;
+
+		// set css
+		$('div').css('margin-left', -marginLeft);
+	</script>
+	<style type="text/css">
+	 	.heading{
+	 		margin-top: 1.5em;
+	 		font-family: 'Lobster', cursive;
+  			color: #555;
+  			font-size: 2em;
+	 	}
+
+	 	.color-showcase{
+	 		width:auto;
+	 		position:relative;
+	 		margin: 1em 1em 1em 1em;
+	 		background-repeat: no-repeat;
+	 		background-position: center;
+	 		background-size: contain !important;
+	 		width:21%;
+	 		height:100px;
+	 		float:left;
+	 		border:solid 1px #d0d0d0;
+	 	}
+	 	.anchor-showcase{
+	 		position:relative; display:block; width:100%; height:100%; background: rgba(0,0,0,0.7);
+	 		opacity: 0.0;
+	 		-webkit-transition: opacity 0.7s;
+	 		-moz-transition: opacity 0.7s;
+	 		-o-transition: opacity 0.7s;
+    		transition: opacity 0.7s;
+	 	}
+	 	.anchor-showcase span{
+	 		color: white;
+	 		margin-top: -12px;
+	 		top:50%;
+	 		width: 100%;
+	 		text-align: center;
+	 		position: absolute;
+	 		opacity: 0.0;
+	 	}
+	 	.anchor-showcase:hover{
+    		opacity:1.0;
+	 	}
+	 	.anchor-showcase:hover span{
+    		opacity:1.0;
+	 	}
+	 	.stitched {
+		   /*padding: 20px;*/
+		   /*margin: 10px;*/
+		   /*background: #ff0030;*/
+		   color: #fff;
+		   font-size: 21px;
+		   font-weight: bold;
+		   line-height: 1.3em;
+		   border: 3px dashed rgba(20,20,20,0.7);
+		   border-radius: 55px;
+		   /*box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);*/
+		   text-shadow: -1px -1px #aa3030;
+		   font-weight: normal;
+		}
+		.bordered{		
+		   /*padding: 20px;*/
+		   /*margin: 10px;*/
+		   /*background: #ff0030;*/
+		   color: #fff;
+		   font-size: 21px;
+		   font-weight: bold;
+		   line-height: 1.3em;
+		   border: 0px solid #fff;
+		   border-radius: 60px;
+		   /*box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);*/
+		   text-shadow: -1px -1px #aa3030;
+		   font-weight: normal;	
+		}
+		@media only screen and (max-width: 650px) {
+		  .bordered{
+		  	width: 300px !important;
+		  	height: 200px !important;
+		  	border-radius: 40px;
+		  	z-index: 1000;
+		  }
+		  .stitched{
+		  	width: 290px !important;
+		  	height: 190px !important;
+		  	border-radius: 37px;
+		  	border: 2px dashed rgba(20,20,20,0.7);
+		  	z-index: 1000;
+		  }
+		  .bordered-small{
+		  	width: 300px !important;
+		  	height: 146px !important;
+		  	border-radius: 40px;
+		  	z-index: 1001;
+		  }
+		  .stitched-small{
+		  	width: 290px !important;
+		  	height: 136px !important;
+		  	border-radius: 37px;
+		  	border: 2px dashed rgba(20,20,20,0.7);
+		  	z-index: 1001;
+		  }
+		  .color-showcase{height: 50px;}
+		}
+	 </style>
+</head>
+<body style="background:#ecf0f1 url(img/swirl_pattern.png) repeat top left;">
+	<div id="focus-anchor" tabindex="1"></div>
+	<div class="row fullWidth" style="background:rgba(192, 57, 43,0.8);">
+		<div class="columns small-6 small-centered" style="background:url(img/ticksterSiteLogo-white.png); background-repeat: no-repeat; background-position: center; background-size: contain; height:140px; margin-top:50px; margin-bottom:50px;"><!--img src="img/ticksterSiteLogo-black.png" width style="margin:auto;" /--></div>
+	</div>
+	<div class="row">
+		<div class="columns small-12">
+			<div class="heading" style="text-align:center; position:relative">Slider Variant</div><br />
+			<div class="bordered" style="position:relative; margin:auto; background:url(img/mac_1.jpg); background-repeat: no-repeat; width:616px; height:411px; background-size: contain; padding-top:5px;">
+				<div  class="stitched" style="position:relative; width:606px; height:401px; margin-left:5px;">
+					<a href="Template/Slider.html" target="_blank" style="position:relative; display:block; width:100%; height:100%;"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="columns small-12">
+			<div class="heading" style="text-align:center; position:relative">Youtube Video Variant</div><br />
+			<div class="bordered" style="position:relative; margin:auto; background:url(img/mac_2.jpg); background-repeat: no-repeat; width:616px; height:411px; background-size: contain; padding-top:5px;">
+				<div  class="stitched" style="position:relative; width:606px; height:401px; margin-left:5px;">
+					<a href="Template/Video.html" target="_blank" style="position:relative; display:block; width:100%; height:100%;"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="columns small-12">
+			<div class="heading" style="text-align:center; position:relative">Animated FX Variant</div><br />
+			<div class="bordered bordered-small" style="position:relative; margin:auto; background:url(img/animatedScreen.jpg); background-repeat: no-repeat; width:616px; height:299px; background-size: contain; padding-top:5px;">
+				<div  class="stitched stitched-small" style="position:relative; width:606px; height:289px; margin-left:5px;">
+					<a href="Template/Animated.html" target="_blank" style="position:relative; display:block; width:100%; height:100%;"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="columns small-12">
+			<div class="heading" style="text-align:center; position:relative">Static Image Variant</div><br />
+			<div class="bordered bordered-small" style="position:relative; margin:auto; background:url(img/imageScreen.jpg); background-repeat: no-repeat; width:616px; height:301px; background-size: contain; padding-top:5px;">
+				<div  class="stitched stitched-small" style="position:relative; width:606px; height:291px; margin-left:5px;">
+					<a href="Template/Image.html" target="_blank" style="position:relative; display:block; width:100%; height:100%;"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="columns small-12">
+			<div class="heading" style="text-align:center; position:relative">Dark Variants</div><br />
+			<div class="color-showcase"  style="background: linear-gradient(to right, #34495e 0%,#34495e 30%,#9b59b6 30%,#9b59b6 100%);;">
+				<a href="Template/Color-Dark-Amethyst.html" target="_blank" class="anchor-showcase" ><span>Amethyst</span></a>
+			</div>
+			<div class="color-showcase" style="background: linear-gradient(to right, #34495e 0%,#34495e 30%,#3498db 30%,#3498db 100%);;">
+				<a href="Template/Color-Dark-Peter-River.html" target="_blank" class="anchor-showcase" ><span>Peter River</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to right, #34495e 0%,#34495e 30%,#2ecc71 30%,#2ecc71 100%);;">
+				<a href="Template/Color-Dark-Emerald.html" target="_blank" class="anchor-showcase" ><span>Emerald</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to right, #34495e 0%,#34495e 30%,#1abc9c 30%,#1abc9c 100%);;">
+				<a href="Template/Color-Dark-Turquoise.html" target="_blank" class="anchor-showcase" ><span>Turquoise</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to right, #34495e 0%,#34495e 30%,#f1c40f 30%,#f1c40f 100%);;">
+				<a href="Template/Color-Dark-Sun-Flower.html" target="_blank" class="anchor-showcase" ><span>Sun Flower</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to right, #34495e 0%,#34495e 30%,#e74c3c 30%,#e74c3c 100%);;">
+				<a href="Template/Color-Dark-Alizarin.html" target="_blank" class="anchor-showcase" ><span>Alizarin</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to right, #34495e 0%,#34495e 30%,#bdc3c7 30%,#bdc3c7 100%);;">
+				<a href="Template/Color-Dark-Silver.html" target="_blank" class="anchor-showcase" ><span>Silver</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to right, #34495e 0%,#34495e 30%,#7f8c8d 30%,#7f8c8d 100%);;">
+				<a href="Template/Color-Dark-Asbestos.html" target="_blank" class="anchor-showcase" ><span>Asbestos</span></a>
+			</div>
+		<hr>
+	
+			<div class="heading" style="text-align:center; position:relative">Light Variants</div><br />
+			<div class="color-showcase"  style="background: linear-gradient(to left, #ecf0f1 0%,#ecf0f1 30%,#9b59b6 30%,#9b59b6 100%);;">
+				<a href="Template/Color-Light-Amethyst.html" target="_blank" class="anchor-showcase" ><span>Amethyst</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to left, #ecf0f1 0%,#ecf0f1 30%,#3498db 30%,#3498db 100%);;">
+				<a href="Template/Color-Light-Peter-River.html" target="_blank" class="anchor-showcase" ><span>Peter River</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to left, #ecf0f1 0%,#ecf0f1 30%,#2ecc71 30%,#2ecc71 100%);;">
+				<a href="Template/Color-Light-Emerald.html" target="_blank" class="anchor-showcase" ><span>Emerald</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to left, #ecf0f1 0%,#ecf0f1 30%,#1abc9c 30%,#1abc9c 100%);;">
+				<a href="Template/Color-Light-Turquoise.html" target="_blank" class="anchor-showcase" ><span>Turquoise</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to left, #ecf0f1 0%,#ecf0f1 30%,#f1c40f 30%,#f1c40f 100%);;">
+				<a href="Template/Color-Light-Sun-Flower.html" target="_blank" class="anchor-showcase" ><span>Sun Flower</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to left, #ecf0f1 0%,#ecf0f1 30%,#e74c3c 30%,#e74c3c 100%);;">
+				<a href="Template/Color-Light-Alizarin.html" target="_blank" class="anchor-showcase" ><span>Alizarin</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to left, #ecf0f1 0%,#ecf0f1 30%,#bdc3c7 30%,#bdc3c7 100%);;">
+				<a href="Template/Color-Light-Silver.html" target="_blank" class="anchor-showcase" ><span>Silver</span></a>
+			</div>
+			<div class="color-showcase"  style="background: linear-gradient(to left, #ecf0f1 0%,#ecf0f1 30%,#7f8c8d 30%,#7f8c8d 100%);;">
+				<a href="Template/Color-Light-Asbestos.html" target="_blank" class="anchor-showcase" ><span>Asbestos</span></a>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="heading" style="font-size:1.5em; color:#757575; width:100%; text-align:center; position:relative;"><a href="http://themeforest.net/user/prototype11" target="_blank">Prototype11 -  Themes &amp; Templates</a></div><br />
+	<script>
+	    (function($){
+	        $(window).load(function(){
+	            $('body').mCustomScrollbar({
+	            	theme: "inset-3-dark",
+	            	//mouseWheel:{enable:false}
+	            	scrollInertia:600,
+	            	mouseWheel:{
+	            		scrollAmount:100
+	            	},
+	            	keyboard:{
+	            		enable: true,
+	            		scrollAmount:15,
+	            		scrollType:"stepless"
+	            	},
+	            	contentTouchScroll:25,
+	            	scrollButtons:{
+	            		enable: true,
+	            		scrollType:"stepped"
+	            	}
+	            });
+	            setTimeout(function(){
+				    $("#focus-anchor").focus();
+				},1000);
+	        });
+	        //$("#header-row").focus();
+	        /*$('body').sroll(function() {
+				$.trigger("click");
+			});*/
+
+	    })(jQuery);
+	    
+	    
+	</script>
+</body>
+</html>
